@@ -7,7 +7,7 @@ import { readFileSync } from "fs";
     const editionDropAddress = await sdk.deployer.deployEditionDrop({
       name: "FitDao Membership",
       description: "A Dao for Keeping Fit",
-      image: readFileSync("scripts/assets/stice.png"),
+      image: readFileSync("scripts/assets/minimalist.png"),
       primary_sale_recipient: AddressZero,
     })
 
