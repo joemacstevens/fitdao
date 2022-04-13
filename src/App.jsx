@@ -191,14 +191,26 @@ const memberList = useMemo(() => {
   );
 }
 
+  if (network?.[0].data.chain.id !== ChainId.Rinkeby) {
+  return (
+    <div className="unsupported-network">
+      <h2>Please connect to Rinkeby</h2>
+      <p>
+        This dapp only works on the Rinkeby network, please switch networks
+        in your connected wallet.
+      </p>
+    </div>
+  );
+}
+
  if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>🍪DAO Member Page</h1>
+        <h1>👊 FitDAO</h1>
         <p>Congratulations on being a member</p>
         <div>
           <div>
-            <h2>Member List</h2>
+            <h2>Leaderboard</h2>
             <table className="card">
               <thead>
                 <tr>
